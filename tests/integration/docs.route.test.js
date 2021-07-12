@@ -7,7 +7,7 @@ describe('Auth routes', () => {
   describe('GET /docs', () => {
     test('should return 404 when running in production', async () => {
       config.env = 'production';
-      await request(app).get('/docs').send().expect(httpStatus.OK);
+      await request(app).get('/docs').send().expect(httpStatus.NOT_FOUND);
     });
   });
 });
