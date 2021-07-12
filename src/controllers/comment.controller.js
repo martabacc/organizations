@@ -10,7 +10,6 @@ const create = catchAsync(async (req, res) => {
     organizationName,
   });
 
-  delete comment._id;
   res.status(httpStatus.CREATED).send(comment);
 });
 
