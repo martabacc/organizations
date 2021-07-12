@@ -2,12 +2,11 @@ const { CommentService } = require('../../../src/models');
 
 jest.mock('../../../src/models', () => ({
   CommentService: {
-    create: jest.fn()
-  }
-}))
+    create: jest.fn(),
+  },
+}));
 
 describe('CommentService', () => {
-
   afterEach(() => {
     jest.resetAllMocks();
   });

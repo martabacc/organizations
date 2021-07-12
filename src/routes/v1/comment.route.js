@@ -3,8 +3,7 @@ const commentController = require('../../controllers/comment.controller');
 
 const router = express.Router();
 
-router
-  .post('/:organizationName/comments',commentController.create)
+router.post('/:organizationName/comments', commentController.create);
 
 module.exports = router;
 

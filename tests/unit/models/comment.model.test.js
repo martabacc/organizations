@@ -7,7 +7,7 @@ describe('Comment model', () => {
     beforeEach(() => {
       newComment = {
         comment: faker.lorem.text(),
-        organizationName: faker.internet.userName()
+        organizationName: faker.internet.userName(),
       };
     });
 
@@ -20,7 +20,7 @@ describe('Comment model', () => {
     test('should not return user password when toJSON is called', () => {
       const newComment = {
         comment: faker.lorem.text(),
-        organizationName: faker.internet.userName()
+        organizationName: faker.internet.userName(),
       };
       expect(new Comment(newComment).toJSON()).not.toHaveProperty('password');
     });

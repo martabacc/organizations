@@ -22,7 +22,6 @@ const commentSchema = mongoose.Schema(
 // add plugin that converts mongoose to json
 commentSchema.plugin(toJSON);
 
-
 /**
  * @typedef User
  */

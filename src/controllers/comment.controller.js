@@ -7,7 +7,7 @@ const create = catchAsync(async (req, res) => {
 
   const comment = await commentService.create({
     ...req.body,
-    organizationName
+    organizationName,
   });
 
   delete comment.id;
