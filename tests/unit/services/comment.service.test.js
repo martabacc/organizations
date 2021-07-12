@@ -7,6 +7,11 @@ jest.mock('../../../src/models', () => ({
 }))
 
 describe('CommentService', () => {
+
+  afterEach(() => {
+    jest.resetAllMocks();
+  });
+
   test('should return 200 when all payload are correct', () => {
     const payload = {};
 
