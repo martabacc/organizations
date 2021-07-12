@@ -29,9 +29,9 @@ const getMembers = async (organizationName) => {
   });
 
   const getFollowers = members.map(async (member, index) => {
-    const { followers } = await getUserDetail(member.login);
+    const { followers, following } = await getUserDetail(member.login);
 
-    Object.assign(members[index], { followers });
+    Object.assign(members[index], { followers, following });
   });
 
   await Promise.all(getFollowers);
