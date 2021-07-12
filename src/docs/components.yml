@@ -59,7 +59,7 @@ paths:
     get:
       tags:
         - "comments"
-      summary: "get all comments from given "
+      summary: "get all comments from given organization name"
       consumes:
         - "application/json"
       parameters:
