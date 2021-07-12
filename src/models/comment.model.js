@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 const { toJSON } = require('./plugins');
 
 const commentSchema = mongoose.Schema(
@@ -25,6 +26,6 @@ commentSchema.plugin(toJSON);
 /**
  * @typedef User
  */
-const User = mongoose.model('Comment', commentSchema);
+const Comment = mongoose.model('Comment', commentSchema);
 
-module.exports = User;
+module.exports = Comment;

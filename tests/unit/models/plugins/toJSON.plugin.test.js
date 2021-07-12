@@ -8,13 +8,12 @@ describe('toJSON plugin', () => {
     connection = mongoose.createConnection();
   });
 
-  it('should replace _id with id', () => {
+  it('should remove _id', () => {
     const schema = mongoose.Schema();
     schema.plugin(toJSON);
     const Model = connection.model('Model', schema);
     const doc = new Model();
     expect(doc.toJSON()).not.toHaveProperty('_id');
-    expect(doc.toJSON()).toHaveProperty('id', doc._id.toString());
   });
 
   it('should remove __v', () => {
@@ -31,7 +30,22 @@ describe('toJSON plugin', () => {
     const Model = connection.model('Model', schema);
     const doc = new Model();
     expect(doc.toJSON()).not.toHaveProperty('createdAt');
-    expect(doc.toJSON()).not.toHaveProperty('updatedAt');
+  });
+
+  it('should remove updatedAt', () => {
+    const schema = mongoose.Schema({}, { timestamps: true });
+    schema.plugin(toJSON);
+    const Model = connection.model('Model', schema);
+    const doc = new Model();
+    expect(doc.toJSON()).not.toHaveProperty('createdAt');
+  });
+
+  it('should remove deletedAt', () => {
+    const schema = mongoose.Schema({}, { timestamps: true });
+    schema.plugin(toJSON);
+    const Model = connection.model('Model', schema);
+    const doc = new Model();
+    expect(doc.toJSON()).not.toHaveProperty('deletedAt');
   });
 
   it('should remove any path set as private', () => {
