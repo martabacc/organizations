@@ -5,8 +5,16 @@ const setupTestDB = require('../utils/setupTestDB');
 
 setupTestDB();
 
+jest.mock('../../src/services/githubRest.service', () => ({
+  getUserDetail: jest.fn().mockResolvedValue({}),
+}));
+
 describe('Comment Route', () => {
-  beforeEach(() => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  afterAll(() => {
     jest.resetAllMocks();
   });
 

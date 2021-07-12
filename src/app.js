@@ -8,7 +8,7 @@ const httpStatus = require('http-status');
 const config = require('./config/config');
 const morgan = require('./config/morgan');
 const { maxRateInMinutes } = require('./middlewares/rateLimiter');
-const routes = require('./routes/v1');
+const routes = require('./routes');
 const { errorConverter, errorHandler } = require('./middlewares/error');
 const ApiError = require('./utils/ApiError');
 
@@ -39,9 +39,9 @@ app.use(compression());
 app.use(cors());
 app.options('*', cors());
 
-// limit repeated failed requests to auth endpoints
+// limit repeated failed requests to endpoints
 if (config.env === 'production') {
-  app.use('/auth', maxRateInMinutes(15, 5));
+  app.use('*', maxRateInMinutes(15, 3));
 }
 
 // v1 api routes
