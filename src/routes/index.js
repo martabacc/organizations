@@ -1,7 +1,7 @@
 const express = require('express');
 const commentRoute = require('./comment.route');
 const docsRoute = require('./docs.route');
-const config = require('../../config/config');
+const config = require('../config/config');
 
 const router = express.Router();
 
