@@ -18,4 +18,10 @@ describe('Comment Route', () => {
       await request(app).post('/orgs/abc/comments').send(payload).expect(httpStatus.CREATED);
     });
   });
+
+  describe('gete', () => {
+    test('should return 200 when all payload are correct', async () => {
+      await request(app).get('/orgs/abc/comments').expect(httpStatus.OK);
+    });
+  });
 });
