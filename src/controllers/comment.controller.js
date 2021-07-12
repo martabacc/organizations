@@ -1,6 +1,6 @@
 const httpStatus = require('http-status');
 const catchAsync = require('../utils/catchAsync');
-const { commentService } = require('../services');
+const { commentService, githubService } = require('../services');
 
 const create = catchAsync(async (req, res) => {
   const { organizationName } = req.params;
@@ -33,9 +33,9 @@ const softDelete = catchAsync(async (req, res) => {
 const getMembers = catchAsync(async (req, res) => {
   const { organizationName } = req.params;
 
-  await commentService.softDelete(organizationName);
+  const members = await githubService.getMembers(organizationName);
 
-  res.status(httpStatus.OK).send();
+  res.status(httpStatus.OK).send(members);
 });
 
 module.exports = {
