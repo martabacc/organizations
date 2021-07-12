@@ -24,7 +24,7 @@ describe('toJSON plugin', () => {
     expect(doc.toJSON()).not.toHaveProperty('__v');
   });
 
-  it('should remove createdAt and updatedAt', () => {
+  it('should remove createdAt', () => {
     const schema = mongoose.Schema({}, { timestamps: true });
     schema.plugin(toJSON);
     const Model = connection.model('Model', schema);
@@ -40,12 +40,12 @@ describe('toJSON plugin', () => {
     expect(doc.toJSON()).not.toHaveProperty('createdAt');
   });
 
-  it('should remove deletedAt', () => {
+  it('should remove deleted', () => {
     const schema = mongoose.Schema({}, { timestamps: true });
     schema.plugin(toJSON);
     const Model = connection.model('Model', schema);
     const doc = new Model();
-    expect(doc.toJSON()).not.toHaveProperty('deletedAt');
+    expect(doc.toJSON()).not.toHaveProperty('deleted');
   });
 
   it('should remove any path set as private', () => {
