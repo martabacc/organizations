@@ -1,5 +1,6 @@
 const express = require('express');
 const commentRoute = require('./comment.route');
+const memberRoute = require('./member.route');
 const docsRoute = require('./docs.route');
 const config = require('../config/config');
 
@@ -8,7 +9,7 @@ const router = express.Router();
 const defaultRoutes = [
   {
     path: '/orgs',
-    route: commentRoute,
+    route: [commentRoute, memberRoute],
   },
 ];
 
