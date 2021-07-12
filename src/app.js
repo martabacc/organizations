@@ -4,7 +4,6 @@ const xss = require('xss-clean');
 const mongoSanitize = require('express-mongo-sanitize');
 const compression = require('compression');
 const cors = require('cors');
-const passport = require('passport');
 const httpStatus = require('http-status');
 const config = require('./config/config');
 const morgan = require('./config/morgan');
@@ -39,7 +38,6 @@ app.use(compression());
 // enable cors
 app.use(cors());
 app.options('*', cors());
-
 
 // limit repeated failed requests to auth endpoints
 if (config.env === 'production') {

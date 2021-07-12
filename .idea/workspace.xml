@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="746277df-8fd2-4291-a0db-f09c0e30c9e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/integration/user.route.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middlewares/rateLimiter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/rateLimiter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/v1/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/v1/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/v1/user.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/v1/user.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/fixtures/token.fixture.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/integration/auth.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/integration/docs.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/integration/docs.route.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/integration/user.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/integration/user.route.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/integration/user.route.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,9 +157,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="419" y="189" width="602" height="522" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1626062839975" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1626062904680">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1626063409939">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1626062904680" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1626063409939" />
   </component>
 </project>

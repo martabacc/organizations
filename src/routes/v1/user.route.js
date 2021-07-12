@@ -5,7 +5,6 @@ const router = express.Router();
 
 router.get('/', userController.helloWorld);
 
-
 module.exports = router;
 
 /**

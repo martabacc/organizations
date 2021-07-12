@@ -6,5 +6,5 @@ const helloWorld = catchAsync(async (_, res) => {
 });
 
 module.exports = {
-  helloWorld
+  helloWorld,
 };

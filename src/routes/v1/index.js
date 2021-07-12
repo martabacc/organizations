@@ -8,7 +8,7 @@ const router = express.Router();
 const defaultRoutes = [
   {
     path: '/',
-    route: (_,res) => res.send('hello world!'),
+    route: (_, res) => res.send('hello world!'),
   },
   {
     path: '/users',

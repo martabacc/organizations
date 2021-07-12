@@ -8,10 +8,7 @@ setupTestDB();
 describe('Root Route', () => {
   describe('GET /', () => {
     test('should return 200', async () => {
-      const res = await request(app)
-        .get('/user')
-        .send()
-        .expect(httpStatus.OK);
+      await request(app).get('/user').send().expect(httpStatus.OK);
     });
   });
 });
