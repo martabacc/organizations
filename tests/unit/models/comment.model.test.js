@@ -15,14 +15,4 @@ describe('Comment model', () => {
       await expect(new Comment(newComment).validate()).resolves.toBeUndefined();
     });
   });
-
-  describe('Comment toJSON()', () => {
-    test('should not return user password when toJSON is called', () => {
-      const newComment = {
-        comment: faker.lorem.text(),
-        organizationName: faker.internet.userName(),
-      };
-      expect(new Comment(newComment).toJSON()).not.toHaveProperty('password');
-    });
-  });
 });
