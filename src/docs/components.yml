@@ -6,6 +6,30 @@ info:
     email: 'ronayumik@gmail.com'
 
 paths:
+  /orgs/{organizationName}/members:
+    get:
+      tags:
+        - "members"
+      summary: "get members from given orgs"
+      consumes:
+        - "application/json"
+      parameters:
+        - in: "path"
+          name: "organizationName"
+          required: true
+          schema:
+            type: "string"
+            example: "xendit"
+      responses:
+        200:
+          description: "Successful"
+          content:
+            application/json:
+              schema:
+                type: "array"
+                items:
+                  $ref: "#/components/schemas/Member"
+
   /orgs/{organizationName}/comments:
     post:
       tags:
