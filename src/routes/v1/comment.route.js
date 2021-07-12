@@ -1,17 +1,17 @@
 const express = require('express');
-const userController = require('../../controllers/user.controller');
+const commentController = require('../../controllers/comment.controller');
 
 const router = express.Router();
 
-router.get('/', userController.helloWorld);
+router.post('/:organizationName/comments', commentController.create);
 
 module.exports = router;
 
 /**
  * @swagger
  * tags:
- *   name: Users
- *   description: User management and retrieval
+ *   name: Comments
+ *   description: Managing comments
  */
 
 /**
@@ -20,7 +20,7 @@ module.exports = router;
  *   post:
  *     summary: Create a user
  *     description: Only admins can create other users.
- *     tags: [Users]
+ *     tags: [Comments]
  *     security:
  *       - bearerAuth: []
  *     requestBody:
@@ -71,7 +71,7 @@ module.exports = router;
  *   get:
  *     summary: Get all users
  *     description: Only admins can retrieve all users.
- *     tags: [Users]
+ *     tags: [Comments]
  *     security:
  *       - bearerAuth: []
  *     parameters:
@@ -140,7 +140,7 @@ module.exports = router;
  *   get:
  *     summary: Get a user
  *     description: Logged in users can fetch only their own user information. Only admins can fetch other users.
- *     tags: [Users]
+ *     tags: [Comments]
  *     security:
  *       - bearerAuth: []
  *     parameters:
@@ -167,7 +167,7 @@ module.exports = router;
  *   patch:
  *     summary: Update a user
  *     description: Logged in users can only update their own information. Only admins can update other users.
- *     tags: [Users]
+ *     tags: [Comments]
  *     security:
  *       - bearerAuth: []
  *     parameters:
@@ -218,7 +218,7 @@ module.exports = router;
  *   delete:
  *     summary: Delete a user
  *     description: Logged in users can delete only themselves. Only admins can delete other users.
- *     tags: [Users]
+ *     tags: [Comments]
  *     security:
  *       - bearerAuth: []
  *     parameters:
