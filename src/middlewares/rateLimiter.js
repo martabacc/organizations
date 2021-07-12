@@ -1,9 +1,9 @@
 const rateLimit = require('express-rate-limit');
 
-const maxRateInMinutes = (rate, minutes) =>
+const maxRateInMinutes = (hitCount, minutes) =>
   rateLimit({
     windowMs: minutes * 60 * 1000,
-    max: rate,
+    max: hitCount,
     skipSuccessfulRequests: false,
   });
 

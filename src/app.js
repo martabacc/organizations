@@ -41,7 +41,7 @@ app.options('*', cors());
 
 // limit repeated failed requests to endpoints
 if (config.env === 'production') {
-  app.all('/', maxRateInMinutes(15, 5));
+  app.use('*', maxRateInMinutes(15, 3));
 }
 
 // v1 api routes
