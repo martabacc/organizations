@@ -5,14 +5,41 @@ const octokit = new Octokit({
   auth: config.github.apiKey,
 });
 
-const getMembers = (organizationName) => {
-  const members = octokit.rest.orgs.listMembers({
+/**
+ * get user detail from given username
+ * @param {string} username
+ * @returns {object} detail user
+ */
+const getUserDetail = async (username) => {
+  const { data: user } = await octokit.rest.users.getByUsername({
+    username,
+  });
+
+  return user;
+};
+
+/**
+ * get enriched members detail from given org name
+ * @param {string} organizationName
+ * @returns {object} array of members
+ */
+const getMembers = async (organizationName) => {
+  const { data: members } = await octokit.rest.orgs.listMembers({
     org: organizationName,
   });
 
-  return members.data;
+  const getFollowers = members.map(async (member, index) => {
+    const userDetail = await getUserDetail(member.login);
+
+    Object.assign(members[index], { followersCount: userDetail.followers });
+  });
+
+  await Promise.all(getFollowers);
+
+  return members;
 };
 
 module.exports = {
   getMembers,
+  getUserDetail,
 };
