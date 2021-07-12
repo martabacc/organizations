@@ -19,7 +19,18 @@ const getAll = async (organizationName, opts) => {
   return Comment.find({ organizationName }, opts);
 };
 
+/**
+ * delete all comment related to given org name
+ * @param {string} organizationName
+ * @param {Object} opts
+ * @returns {Promise<Comment>}
+ */
+const softDelete = (organizationName) => {
+  return Comment.removeMany({ organizationName });
+};
+
 module.exports = {
   create,
   getAll,
+  softDelete,
 };

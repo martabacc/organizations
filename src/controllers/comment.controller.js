@@ -23,7 +23,16 @@ const get = catchAsync(async (req, res) => {
   res.status(httpStatus.OK).send(comments);
 });
 
+const softDelete = catchAsync(async (req, res) => {
+  const { organizationName } = req.params;
+
+  await commentService.softDelete(organizationName);
+
+  res.status(httpStatus.OK).send();
+});
+
 module.exports = {
   create,
   get,
+  softDelete,
 };
