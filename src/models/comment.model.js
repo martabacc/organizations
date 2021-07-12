@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const softDelete = require('mongoosejs-soft-delete');
 
 const { toJSON } = require('./plugins');
 
@@ -22,6 +23,7 @@ const commentSchema = mongoose.Schema(
 
 // add plugin that converts mongoose to json
 commentSchema.plugin(toJSON);
+commentSchema.plugin(softDelete);
 
 /**
  * @typedef User
