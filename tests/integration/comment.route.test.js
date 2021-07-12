@@ -11,8 +11,11 @@ jest.mock('../../src/services/githubRest.service', () => ({
 
 describe('Comment Route', () => {
   afterEach(() => {
-    jest.resetAllMocks();
     jest.clearAllMocks();
+  });
+
+  afterAll(() => {
+    jest.resetAllMocks();
   });
 
   describe('create', () => {
