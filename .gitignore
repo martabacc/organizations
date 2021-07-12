@@ -12,5 +12,5 @@ yarn-error.log
 coverage
 
 # ide
-.idea
+.idea/*
 

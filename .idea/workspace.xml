@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="746277df-8fd2-4291-a0db-f09c0e30c9e3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/integration/user.route.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/v1/user.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/v1/user.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/fixtures/token.fixture.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/integration/auth.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/integration/docs.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/integration/docs.route.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/integration/user.test.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +55,67 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
+  <component name="RunManager" selected="Jest.Auth routes">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Auth routes" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/tests/integration/docs.route.spec.js" />
+      <test-names>
+        <test-name value="Auth routes" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Root Route" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/tests/integration/user.test.js" />
+      <test-names>
+        <test-name value="Root Route" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="User routes" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/tests/integration/user.test.js" />
+      <test-names>
+        <test-name value="User routes" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.Auth routes" />
+        <item itemvalue="Jest.Root Route" />
+        <item itemvalue="Jest.User routes" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -66,17 +134,33 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1398" height="240" key="GridCell.Tab.0.bottom" timestamp="1626063245882">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="240" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1626063245882" />
+    <state width="1398" height="240" key="GridCell.Tab.0.center" timestamp="1626063245880">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="240" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1626063245880" />
+    <state width="1398" height="240" key="GridCell.Tab.0.left" timestamp="1626063245880">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="240" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1626063245880" />
+    <state width="1398" height="240" key="GridCell.Tab.0.right" timestamp="1626063245881">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="240" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1626063245881" />
     <state width="500" height="445" key="SwitcherDM" timestamp="1626058749980">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1626058749980" />
-    <state x="419" y="189" width="602" height="522" key="find.popup" timestamp="1626058698516">
+    <state x="419" y="189" width="602" height="522" key="find.popup" timestamp="1626062839975">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="419" y="189" width="602" height="522" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1626058698516" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1626057678155">
+    <state x="419" y="189" width="602" height="522" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1626062839975" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1626062904680">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1626057678155" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1626062904680" />
   </component>
 </project>
