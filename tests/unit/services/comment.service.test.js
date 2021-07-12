@@ -5,6 +5,7 @@ jest.mock('../../../src/models', () => ({
   Comment: {
     create: jest.fn(),
     find: jest.fn(),
+    removeMany: jest.fn(),
   },
 }));
 
@@ -16,7 +17,7 @@ describe('CommentService', () => {
   });
 
   describe('create', () => {
-    test('should return success when all fields are valid', () => {
+    test('should call Comment.create with correct param', () => {
       const payload = {};
 
       CommentService.create(payload);
@@ -26,11 +27,19 @@ describe('CommentService', () => {
   });
 
   describe('findAll', () => {
-    test('should return succes', () => {
+    test('should call Comment.find with correct param', () => {
       const opts = {};
       CommentService.getAll(organizationName, {});
 
       expect(Comment.find).toHaveBeenCalledWith({ organizationName }, opts);
+    });
+  });
+
+  describe('softDelete', () => {
+    test('should call model.removeAll correctly', () => {
+      CommentService.softDelete(organizationName);
+
+      expect(Comment.removeMany).toHaveBeenCalledWith({ organizationName });
     });
   });
 });

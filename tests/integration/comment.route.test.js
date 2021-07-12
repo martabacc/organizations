@@ -19,8 +19,14 @@ describe('Comment Route', () => {
     });
   });
 
-  describe('gete', () => {
+  describe('get', () => {
     test('should return 200 when all payload are correct', async () => {
+      await request(app).get('/orgs/abc/comments').expect(httpStatus.OK);
+    });
+  });
+
+  describe('delete', () => {
+    test('should return 200 when payloads are correct', async () => {
       await request(app).get('/orgs/abc/comments').expect(httpStatus.OK);
     });
   });
