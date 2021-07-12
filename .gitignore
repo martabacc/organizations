@@ -13,4 +13,5 @@ coverage
 
 # ide
 .idea/*
+yarn.lock
 
